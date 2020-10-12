@@ -14,4 +14,4 @@ def callback(channel):
 GPIO.add_event_detect(channel,GPIO.BOTH,bouncetime=300)
 GPIO.add_event_callback(channel,callback)
 while(1):
-    time.slepp(1)
+    time.sleep(1)

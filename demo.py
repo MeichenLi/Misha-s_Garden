@@ -1,13 +1,13 @@
 import RPi.GPIO as  GPIO
 import time
 
-channel = 21
+pin = 21
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(channel,GPIO.IN)
+GPIO.setup(pin,GPIO.IN)
 
-def callback(channel):
-    if GPIO.input(channel):
-        print("dry")
+def callback(pin):
+    if GPIO.input(pin):
+        print("dry") # no water,big resistance, value = 1
         time.sleep(1)
     else:
         print("watery")
@@ -16,5 +16,5 @@ def callback(channel):
 GPIO.add_event_detect(channel,GPIO.BOTH,bouncetime=300)
 GPIO.add_event_callback(channel,callback)
 
-while true:
+while(1):
     time.sleep(5)

@@ -7,11 +7,14 @@ GPIO.setup(channel,GPIO.IN)
 
 def callback(channel):
     if GPIO.input(channel):
-        print("Null")
+        print("dry")
+        time.sleep(1)
     else:
-        print("water")
+        print("watery")
+        time.sleep(1)
 
 GPIO.add_event_detect(channel,GPIO.BOTH,bouncetime=300)
 GPIO.add_event_callback(channel,callback)
-while(1):
-    time.sleep(1)
+
+while true:
+    time.sleep(5)

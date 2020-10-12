@@ -16,5 +16,5 @@ def callback(pin):
 GPIO.add_event_detect(pin,GPIO.BOTH,bouncetime=300)
 GPIO.add_event_callback(pin,callback)
 
-while(1):
-    time.sleep(5)
+while True:
+    time.sleep(1)

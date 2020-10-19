@@ -3,12 +3,13 @@ import time
 import spidev
 
 # Moisture sensor channel on MCP3008
-moisture_channel = 0
+m_channel = 0
 
 GPIO.setmode(GPIO.BCM)
 
 
-GPIO.setup(18, GPIO.OUT)
+GPIO.setup(11, GPIO.OUT)
+GPIO.setup(m_channel, GPIO.IN)
 
 threshold = 10
 

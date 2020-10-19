@@ -48,4 +48,4 @@ while True:
   level = interp(level, [0, 1023], [100, 0])
   print("Moisture:", int(level))
   print("Moisture: {0:0.1f}".format(level))
-  sleep(0.1)
+  sleep(2)

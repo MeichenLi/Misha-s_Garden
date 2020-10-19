@@ -38,7 +38,7 @@ def runController():
 #    else:
 #        GPIO.output(18, False)
 
-    p
+    
 
 while True:
   runController()

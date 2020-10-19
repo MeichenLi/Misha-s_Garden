@@ -8,7 +8,7 @@ moisture_channel = 0
 GPIO.setmode(GPIO.BCM)
 
 
-GPIO.setup(11, GPIO.OUT)
+GPIO.setup(18, GPIO.OUT)
 GPIO.setup(moisture_channel, GPIO.IN)
 
 threshold = 10

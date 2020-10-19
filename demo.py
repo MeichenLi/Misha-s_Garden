@@ -6,7 +6,10 @@ import spidev
 moisture_channel = 0
 
 GPIO.setmode(GPIO.BCM)
-TRIGGER_PIN = 18
+
+
+GPIO.setup(18, GPIO.OUT)
+
 threshold = 10
 
 # Open SPI bus
@@ -30,9 +33,9 @@ def runController():
 
 # Check moisture.format(level)
     if (level < threshold):
-        GPIO.output(TRIGGER_PIN, True)
+        GPIO.output(18, True)
     else:
-        GPIO.output(TRIGGER_PIN, False)
+        GPIO.output(18, False)
 
     print("Moisture: {0:0.1f}".format(level))
 

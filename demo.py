@@ -1,6 +1,9 @@
 import RPi.GPIO as GPIO
 import time
 import spidev
+from numpy import interp  # To scale values
+from time import sleep  # To add delay
+
 
 # Moisture sensor channel on MCP3008
 moisture_channel = 0

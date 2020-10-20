@@ -10,11 +10,16 @@ moisture_channel = 0
 
 GPIO.setmode(GPIO.BCM)
 
+#hardware SPI configuration:
+SPI_PORT   = 0
+SPI_DEVICE = 0
+mcp = Adafruit_MCP3008.MCP3008(spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE))
 
-GPIO.setup(18, GPIO.OUT)
+
+# GPIO.setup(18, GPIO.OUT)
 GPIO.setup(moisture_channel, GPIO.IN)
 
-threshold = 10
+# threshold = 10
 
 # Open SPI bus
 spi = spidev.SpiDev()

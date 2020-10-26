@@ -41,16 +41,18 @@ def runController():
     level = readMoisture()
 
 # Check moisture.format(level)
-#    if (level < threshold):
-#        GPIO.output(18, True)
-#    else:
-#        GPIO.output(18, False)
+   if (level < 10.0):
+       GPIO.output(26, True)
+       sleep(0.5)
+       print("Now it is watering")
+   else:
+       GPIO.output(26, False)
 
     
 
 while True:
   level = ReadChannel(moisture_channel)
   level = interp(level, [0, 1023], [100, 0])
-  print("Moisture:", int(level))
+  #print("Moisture:", int(level))
   print("The Moisture is: {0:0.1f}".format(level))
   sleep(2)
